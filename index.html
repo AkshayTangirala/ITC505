@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Serving Fonts</title>
+    <style>
+         @import url('https://fonts.cdnfonts.com/css/okuubuntu');              
+        body{
+            font-family: 'Okuubuntu', sans-serif;                                                                                                                  
+        }
+    </style>
+</head>
+<body>
+    <h1>How a specific font can be delivered to a client (browser) making a request to your server ?</h1>
+    <p>
+       There are two main ways to deliver a specific font to a client's browser when they request it from your server:
+       1. Web Fonts: This method involves embedding the font files directly into your website and serving them along with the rest of the content. You achieve this by using the @font-face rule in your CSS files. This rule specifies the location of the font file and allows you to define different variations like weight and style. Browsers then download the necessary font files and use them to render the text on the page. This ensures consistency and the desired look even if the user doesn't have the font installed locally. However, it can increase the website's initial load time due to the extra files being downloaded.                                        
+    </p>   
+    <p>
+       2. Font Hosting Services: Another option is to use a font hosting service like Google Fonts, Adobe Typekit, or Font Squirrel. These services host a vast library of fonts and provide the necessary code to embed them on your website. You simply choose the font and its variations, and the service generates the required CSS code with optimized font files. This method reduces the load on your server and offers wider browser compatibility. However, some services have paid plans or limitations on usage, and fonts available might be restricted compared to self-hosting.
+    </p> 
+    <h2>
+       Choosing the right method depends on various factors:
+    </h2>
+    <p>
+       •Font Licensing: Ensure you have the proper license for distribution if serving the font yourself.
+       •Website Traffic: Higher traffic means more bandwidth usage with self-hosting, so a service might be better.
+       •Technical Expertise: Implementing self-hosting requires more technical knowledge compared to using a service.
+       •Font Availability: Check if your desired font is available on your chosen service.
+       Consider these factors and explore both methods to choose the best way to deliver the specific font to your client's browser!
+    </p>
+    <hr>
+    <footer class = f>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>    
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    color: #009688;
+    font-style: italic;
+}
+
+h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: #1E90FF; /* Dodger Blue */
+}
+
+h3 {
+    font-family: Georgia, cursive;
+}
+h4 {
+    font-family: Georgia, cursive;
+}
+h5 {
+    font-family: Georgia, cursive;
+}
+h6 {
+    font-family: Georgia, cursive;
+}
+h7 {
+    font-family: Georgia, cursive;
+}
+
+
+
+p {
+    font-family: 'URW Chancery L', cursive;
+    line-height: 1.6;
+    color: #444;
+}
+
+p1 {
+    font-family: Georgia, cursive;
+}
+p5 {
+    font-family: Georgia, cursive;
+}
+p6 {
+    font-family: Georgia, cursive;
+}
+p7 {
+    font-family: Georgia, cursive;
+}
+
+
+
+p2 {
+    font-family: cursive;
+}
+
+p3 {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}
+
+/* Add a simple style for the lastModified span */
+#lastModified {
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+}
+
+

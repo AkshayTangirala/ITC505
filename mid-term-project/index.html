@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Realm of the Elements</title>
+</head>
+<body>
+  <div id="game-container">
+    <div id="story">
+      <p id="story-text">Embrace the path of Earth</p>
+      <img id="story-image" src="https://img.freepik.com/premium-photo/embrace-earth-day-discover-power-loving-nature-sustainable-future-generative-ai_627719-4419.jpg" alt="Story Image">
+    </div>
+    <div id="choices"></div>
+    <div class="Restart">
+    <button id="start-button" onclick="startGame()">Restart</button>
+    </div>
+  </div>
+  <br>
+    <div id="addendum">
+      <h2>Addendum</h2>
+      <h2><strong>Process:</strong></h2> 
+      <p>The game is structured using a finite state machine approach, where each state represents a stage in the game's narrative.</p>
+      <p>The gameData object holds information about each state, including the text to display, available choices, consequences of those choices, and associated images.</p>
+      <p>Two main functions, startGame() and updatePage(), handle game initialization and updating the display, respectively.</p>
+      
+      <h2>Creative Choices:</h2>
+      <p>The game theme revolves around elemental paths, Earth and Sky, offering players distinct choices and consequences.</p>
+      <p>Each state is designed to immerse players in a vivid environment, featuring descriptive text and accompanying images to enhance the storytelling experience.</p>
+      <p>Endings are tailored to reflect the player's choices, offering a sense of accomplishment and closure.</p>
+      
+      <h2>Challenges Faced:</h2>
+      <p><strong>Dynamic Content Rendering: </strong> Dynamically updating the page content based on player choices posed a challenge, particularly managing transitions between states seamlessly.</p>
+      <p><strong>Event Handling:</strong>Ensuring smooth event handling for player choices and updating the game state accordingly required careful attention to event listeners and callback functions.</p>
+      <p><strong>Resource Management:</strong> Handling image resources efficiently, including loading and displaying images without causing performance issues, was crucial.</p>
+      
+      <h2>How Challenges Were Overcome:</h2>
+      <p><strong>Modular Design:</strong> Breaking down the game logic into modular functions aided in better organization and debugging, mitigating issues related to event handling and state transitions.</p>
+      <p><strong>Testing and Debugging:</strong> Rigorous testing and debugging were conducted at each stage of development to identify and address issues promptly.</p>
+      <p><strong>Optimization: </strong> Optimizing resource loading and updating strategies helped maintain smooth gameplay without sacrificing performance.</p>
+       
+      <h2>Insights Gained: </h2>
+      <p><strong>User Experience: </strong> Understanding the importance of immersive storytelling and engaging visuals in enhancing the user experience.</p>
+      <p><strong>State Management: </strong> Appreciating the significance of effective state management in interactive applications, facilitating dynamic content updates and player progression.
+      </p>
+      <p><strong>Feedback Loop: </strong> Recognising the value of iterative development and user feedback in refining and improving the game experience over time.</p>
+
+
+    </div>
+    <footer>
+      <p>Last updated: 
+          <span id="lastModified"></span>
+      </p>
+  </footer>
+  <script type="text/javascript">
+       var x = document.lastModified;
+       document.getElementById('lastModified').textContent = x;
+  </script>
+<script src="index.js"></script>
+</body>
+</html>

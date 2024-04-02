@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Version 2</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Even Or Odd</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="calculator">
+            <input type="number" id="number" class="number-input" placeholder="Enter a number">
+            <button onclick="checkEvenOdd()" class="check-number-button">Check Even/Odd</button><br>
+            <div id="result" class="result-display"></div>
+        </div>
+    </main>
+    
+    <aside>
+        <a href=https://www.amazon.com/Marshall-Acton-Bluetooth-Speaker-Black/dp/B0BC27MM5Z/ref=sr_1_3?crid=2W5AHW4M5C9PZ&dib=eyJ2IjoiMSJ9.9_GedJFSZyGWxgBbrH4jjMfSlOMMblIm7LuM9Z-T6jonGWChh430K9DNOjy5ePZFQlztO4Jz2XUOghtcKZJPiA4jbwcVNr42ZvT-fofKV5soc1wzPhEKBQAW1H7FGzX7APSXsfBF4Jy24CjiHbHFwOXq1DJ7XgZRxut5HuKk6kQlyisxKsMXVFMn-636RNcMllnjwYb8HmzjjEfuWvAeO7r_-9m7MXaYdRDaR13mg7I.L6yEYZVDp2YG-oKC1_zCVjLKWX2SrdS9aQrrHdqdp2M&dib_tag=se&keywords=marshall+speaker&qid=1712007918&sprefix=marsh%2Caps%2C120&sr=8-3>
+            <img src="marshall.jpg" alt="Advertisement">
+        </a>
+        <h3>Click on the image to redirect to amazon.com</h3>
+    </aside>
+    <footer>
+        <h3>Addendum</h3>
+        <p>
+            This project aims to create a simple JavaScript function called checkEvenOdd() that checks whether a given number is even or odd.
+            The function retrieves the input number from an HTML input element with the id 'number', and then displays the result in another HTML element with the id 'result'.</p>
+        <p>
+            <strong>HTML Structure: </strong>
+
+            The HTML file contains an input field with the id 'number' for users to input a number.
+            Another HTML element with the id 'result' is used to display the result of whether the number is even or odd.</p>
+        <p> <strong>JavaScript Function:</strong>
+            
+            The checkEvenOdd() function retrieves the value of the input number using document.getElementById('number').value.
+            It then calculates whether the number is even or odd using the modulus operator %.
+            The result is determined using a ternary operator and stored in the result variable.
+            Finally, the function updates the content of the HTML element with id 'result' to display the input number along with whether it is even or odd.</p>
+        <p>
+            <strong>Challenges and Solutions:</strong>
+        <p>   <strong>Handling Non-Numeric Input:</strong>
+
+            One challenge is ensuring that the input provided by the user is indeed a number.
+            Implementing validation to handle cases where non-numeric inputs are entered would improve the robustness of the function.</p> 
+        <p> <strong>User Interface Design:</strong>
+            
+            While the focus of this project is on functionality, improving the user interface to provide better feedback or error messages could enhance the user experience.</p>
+        <p>
+            <strong>Learning Outcomes:</strong> 
+        <p>  <strong>Understanding JavaScript Fundamentals: </strong> 
+
+        By creating this function, developers gain a deeper understanding of basic JavaScript concepts such as variables, operators, and conditional statements.</p> 
+    <p> <strong>DOM Manipulation:</strong>      
+
+            This project provides practical experience in DOM manipulation, specifically retrieving values from HTML elements and updating their content dynamically.</p> 
+         <p>   <strong>Error Handling:</strong>
+
+            Dealing with potential errors, such as invalid inputs, encourages developers to consider edge cases and implement error-handling mechanisms in their code.</p> 
+        <p>    <strong>Ternary Operator Usage:</strong>
+
+            Implementing the ternary operator to streamline conditional logic helps developers write more concise and readable code.
+        </p>
+
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

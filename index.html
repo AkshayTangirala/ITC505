@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3: Serving Fonts</title>
-    <style>
-         @import url('https://fonts.cdnfonts.com/css/okuubuntu');              
-        body{
-            font-family: 'Okuubuntu', sans-serif;                                                                                                                  
-        }
-    </style>
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>How a specific font can be delivered to a client (browser) making a request to your server ?</h1>
-    <p>
-       There are two main ways to deliver a specific font to a client's browser when they request it from your server:
-       1. Web Fonts: This method involves embedding the font files directly into your website and serving them along with the rest of the content. You achieve this by using the @font-face rule in your CSS files. This rule specifies the location of the font file and allows you to define different variations like weight and style. Browsers then download the necessary font files and use them to render the text on the page. This ensures consistency and the desired look even if the user doesn't have the font installed locally. However, it can increase the website's initial load time due to the extra files being downloaded.                                        
-    </p>   
-    <p>
-       2. Font Hosting Services: Another option is to use a font hosting service like Google Fonts, Adobe Typekit, or Font Squirrel. These services host a vast library of fonts and provide the necessary code to embed them on your website. You simply choose the font and its variations, and the service generates the required CSS code with optimized font files. This method reduces the load on your server and offers wider browser compatibility. However, some services have paid plans or limitations on usage, and fonts available might be restricted compared to self-hosting.
-    </p> 
-    <h2>
-       Choosing the right method depends on various factors:
-    </h2>
-    <p>
-       •Font Licensing: Ensure you have the proper license for distribution if serving the font yourself.
-       •Website Traffic: Higher traffic means more bandwidth usage with self-hosting, so a service might be better.
-       •Technical Expertise: Implementing self-hosting requires more technical knowledge compared to using a service.
-       •Font Availability: Check if your desired font is available on your chosen service.
-       Consider these factors and explore both methods to choose the best way to deliver the specific font to your client's browser!
-    </p>
-    <hr>
-    <footer class = f>
-        <p>Last updated: 
+    <div class="head">
+    <h2>Revenge of Lights Out </h2>
+</div>
+    <div id="gameBoard"></div>
+    <div id="winModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Congratulations! You've won the game!</p>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>    
+    <!-- Addendum Section -->
+    <div id="addendum">
+        <h2>Addendum</h2>
+        <p>The development of "Revenge of Lights Out" was a captivating journey that blended creativity and problem-solving skills. Our goal was to create an immersive and entertaining experience for players while incorporating unique design elements.</p>
+      
+        <h3>Creative Choices:</h3>
+        <ul>
+          <li><strong>Grid Selection:</strong> The 5x5 grid was carefully chosen to strike a balance between complexity and accessibility, ensuring a challenging yet enjoyable gameplay experience.</li>
+          <li><strong>Visual Appeal:</strong> The minimalist user interface was designed to prioritize gameplay while incorporating modern design principles, creating a sleek and visually appealing environment.</li>
+          <li><strong>Rewarding Feedback:</strong> The modal window announcing game completion was implemented to provide players with a satisfying sense of accomplishment and a clear indication of their success.</li>
+        </ul>
+      
+        <h3>Challenges and Solutions:</h3>
+        <ul>
+          <li><strong>Randomization:</strong> Implementing an effective randomization algorithm for the board setup was a significant challenge. This was overcome by developing a sophisticated shuffling function that ensures a unique and solvable game state for each session.</li>
+          <li><strong>Solvability:</strong> Ensuring that the game remained solvable after randomization was a complex task. Through rigorous testing and tweaking of the shuffling algorithm, we were able to guarantee solvability while maintaining the desired level of challenge.</li>
+        </ul>
+      
+        <h3>Insights Gained:</h3>
+        <ul>
+          <li><strong>User-Centric Approach:</strong> Throughout the development process, we realized the paramount importance of keeping the user experience at the forefront. Simple, intuitive gameplay and a well-designed interface significantly enhance player engagement and overall satisfaction.</li>
+          <li><strong>Iterative Testing:</strong> Rigorous and iterative testing proved invaluable in identifying and resolving gameplay and usability issues. This experience reinforced the significance of thorough testing in game development, ensuring a polished and enjoyable final product.</li>
+        </ul>
+    </div>
+    <div class="head">
+    <footer>
+        <p><b>Last updated:</b>
             <span id="lastModified"></span>
         </p>
     </footer>
     <script type="text/javascript">
          var x = document.lastModified;
          document.getElementById('lastModified').textContent = x;
-    </script>    
+    </script>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
